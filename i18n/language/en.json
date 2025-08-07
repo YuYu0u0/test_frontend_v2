@@ -1,4 +1,8 @@
 {
-  "welcome": "Welcome",
-  "test": "Test"
+  "actions": "Actions",
+    "name": "Name",
+    "age": "Age",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete"
 }
