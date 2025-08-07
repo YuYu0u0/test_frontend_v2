@@ -91,4 +91,8 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/style.scss'],
+
+  app: {
+    baseURL: '/test_frontend_v2/'
+  },
 })
