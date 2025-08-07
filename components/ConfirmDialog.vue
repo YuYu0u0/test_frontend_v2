@@ -78,6 +78,10 @@ defineExpose({ open })
                     &:hover {
                         background-color: #d6d6d6;
                     }
+
+                    &:active {
+                        background-color: gray;
+                    }
                 }
 
                 &.confirm {
@@ -86,6 +90,10 @@ defineExpose({ open })
 
                     &:hover {
                         background-color: #1565c0;
+                    }
+
+                    &:active {
+                        background-color: navy;
                     }
                 }
             }

@@ -30,17 +30,44 @@ const props = withDefaults(defineProps<Props>(), {
   // success 綠
   &-success {
     background-color: green;
+
+    &:hover {
+      background-color: darkgreen;
+    }
+
+    &:active {
+      background-color: limegreen;
+      transform: scale(0.95);
+    }
   }
 
   // error 紅
   &-error {
     background-color: red;
+
+    &:hover {
+      background-color: darkred;
+    }
+
+    &:active {
+      background-color: orangered;
+      transform: scale(0.95);
+    }
   }
 
   // warn 黃
   &-warn {
     background-color: yellow;
     color: black;
+
+    &:hover {
+      background-color: orange;
+    }
+
+    &:active {
+      background-color: #b38f00;
+      transform: scale(0.95);
+    }
   }
 
   &-normal {

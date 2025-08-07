@@ -28,6 +28,12 @@ const switchLocale = (code: 'zh-TW' | 'en-US') => {
         color: black;
         font-size: 1rem;
         border-radius: 5px;
+
+        &:hover,
+        &:active {
+            background-color: dimgray;
+            color: white;
+        }
     }
 }
 </style>
