@@ -91,5 +91,8 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/style.scss'],
-
+  ssr: true,
+  nitro: {
+    preset: 'node'
+  }
 })
