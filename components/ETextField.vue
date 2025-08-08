@@ -26,9 +26,15 @@ const inputId = computed(() => {
 
 <style scoped>
 .e-text-field {
-  width: 60%;
+  width: 80%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+
+  @media (max-width: 992px) {
+    width: 60%;
+    flex-direction: column;
+  }
 
   label {
     padding: 0.5rem;
@@ -36,12 +42,18 @@ const inputId = computed(() => {
   }
 
   input {
+    width: 70%;
     font-size: 1.5rem;
     background-color: #2a2a2a;
     color: white;
     border: 1px solid white;
     border-radius: 5px;
     padding: 5px;
+
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
 
     &:focus {
       background-color: #2a2a2a;
