@@ -37,8 +37,14 @@ const inputId = computed(() => {
   }
 
   label {
+    width: 15%;
     padding: 0.5rem;
     font-size: 1.5rem;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   input {
