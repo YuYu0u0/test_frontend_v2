@@ -11,6 +11,7 @@ import { useI18n } from 'vue-i18n'
 
 const { locale } = useI18n()
 
+// 切換語言，將 locale 設為指定的語言代碼
 const switchLocale = (code: 'zh-TW' | 'en-US') => {
     locale.value = code
 }

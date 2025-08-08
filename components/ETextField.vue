@@ -61,6 +61,7 @@ const inputId = computed(() => {
       width: 100%;
     }
 
+    /* 保持輸入時不會變色 */
     &:focus {
       background-color: #2a2a2a;
       color: white;
@@ -68,6 +69,7 @@ const inputId = computed(() => {
       outline: none;
     }
 
+    /* 隱藏數字輸入框的小箭頭 */
     &[type="number"] {
 
       &::-webkit-outer-spin-button,

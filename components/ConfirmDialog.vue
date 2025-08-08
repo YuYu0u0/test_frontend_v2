@@ -13,11 +13,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const dialog = ref<HTMLDialogElement | null>(null)
+const dialog = ref<HTMLDialogElement | null>(null) // dialog 元素引用
 const message = ref('')
-let resolveFn: ((value: boolean) => void) | null = null
+let resolveFn: ((value: boolean) => void) | null = null // Promise 的 resolve 函式
 
-// open method for parent
+// 父元件可呼叫的開啟方法，
+// 會顯示對話框並回傳一個 Promise，
+// 讓父元件等待使用者確認或取消的結果 (true/false)
 function open(msg: string): Promise<boolean> {
     message.value = msg
     dialog.value?.showModal()
@@ -26,11 +28,15 @@ function open(msg: string): Promise<boolean> {
     })
 }
 
+// 使用者點擊「確定」時呼叫，
+// 透過 resolveFn 回傳 true，並關閉對話框
 function onConfirm() {
     resolveFn?.(true)
     dialog.value?.close()
 }
 
+// 使用者點擊「取消」時呼叫，
+// 透過 resolveFn 回傳 false，並關閉對話框
 function onCancel() {
     resolveFn?.(false)
     dialog.value?.close()

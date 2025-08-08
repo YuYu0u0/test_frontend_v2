@@ -40,8 +40,11 @@ const form = reactive<User>({
     age: 0,
 })
 
+// 判斷是否為編輯狀態（有 user id）
 const isEditing = computed(() => !!props.user?.id)
 
+
+// 當 props.user 改變時更新表單資料
 watch(
     () => props.user,
     (newUser) => {
@@ -56,6 +59,7 @@ watch(
     { immediate: true }
 )
 
+// 提交表單，根據動作判斷是否有效
 const handleSubmit = (action: 'create' | 'update') => {
     if (!form.name || form.age <= 0) return
     if (action === 'create' && isEditing.value) return

@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import EBtn from './EBtn.vue'
 
+// 多語系設定
 const { t } = useI18n()
 
 interface User {
@@ -33,15 +34,18 @@ const props = defineProps<{
     users: User[]
 }>()
 
+// 宣告事件edit 與 delete
 const emit = defineEmits<{
     (e: 'edit', user: User): void
     (e: 'delete', id: number): void
 }>()
 
+// 刪除事件
 const handleDelete = (id: number) => {
     emit('delete', id)
 }
 
+// 修改事件
 const handleEdit = (user: User) => {
     emit('edit', user)
 }
